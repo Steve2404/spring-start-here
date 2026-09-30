@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?player version="2"?>
+<!-- Playlist du dimanche -->
+<playlist name="Dimanche">
+  <track id="t1">
+    <title>Blue <em>in</em> Green</title>
+    <duration>5:37</duration>
+    <tags><tag>jazz</tag><tag>modal</tag></tags>
+  </track>
+  <!-- piste bonus -->
+  <track id="t2">
+    <title><![CDATA[Rock & Roll <live>]]></title>
+    <duration>3:45</duration>
+    <ad/><ad/><ad/>
+    <tags/>
+  </track>
+  <track id="t3"><title>So What</title><duration>9:22</duration><ad/><tags><tag>jazz</tag></tags></track>
+</playlist>

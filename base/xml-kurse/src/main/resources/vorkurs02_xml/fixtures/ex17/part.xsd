@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="OrderType"><xs:sequence>
+    <xs:element name="note" type="xs:string"/>
+    <xs:element name="item" maxOccurs="unbounded"><xs:complexType><xs:attribute name="sku" type="xs:string"/></xs:complexType></xs:element>
+  </xs:sequence></xs:complexType>
+</xs:schema>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Commande du magasin de Lyon -->
+<?audit level="full"?>
+<order id="A-17" status='open'>
+  <customer vip="yes">Tom &amp; Jerry</customer>
+  <note>1 &lt; 2 et 3 &gt; 2, prix &#8364;&#x20AC;</note>
+  <item sku="X1" qty = "2" />
+  <item sku="X2" qty="1"></item>
+</order>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order xmlns="urn:shop:order" id="D-004">
+  <customer>Lea</customer>
+  <line>
+    <sku>S0</sku>
+    <quantity>1</quantity>
+    <price currency="EUR">1</price>
+  </line>
+  <line>
+    <sku>S1</sku>
+    <quantity>1</quantity>
+    <price currency="EUR">1</price>
+  </line>
+  <line>
+    <sku>S2</sku>
+    <quantity>1</quantity>
+    <price currency="EUR">1</price>
+  </line>
+  <line>
+    <sku>S3</sku>
+    <quantity>1</quantity>
+    <price currency="EUR">1</price>
+  </line>
+  <line>
+    <sku>S4</sku>
+    <quantity>1</quantity>
+    <price currency="EUR">1</price>
+  </line>
+  <line>
+    <sku>S5</sku>
+    <quantity>1</quantity>
+    <price currency="EUR">1</price>
+  </line>
+  <delivery>12 rue des Lilas, Lyon</delivery>
+</order>

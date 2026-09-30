@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inv:invoice xmlns:inv="urn:shop:invoice" xmlns="urn:shop:common"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:money="urn:shop:money" id="F-1" xml:lang="fr">
+  <customer inv:vip="true">Lea</customer>
+  <inv:line nr="1">
+    <amount xsi:type="money:Euro">12.50</amount>
+    <note xmlns="">sans namespace</note>
+    <inv:tax xmlns:inv="urn:shop:tax" rate="20"/>
+  </inv:line>
+  <money:total xmlns:m2="urn:shop:money" m2:currency="EUR">12.50</money:total>
+</inv:invoice>

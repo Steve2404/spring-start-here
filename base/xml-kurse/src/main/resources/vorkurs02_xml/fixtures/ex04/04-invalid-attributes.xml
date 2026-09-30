@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE library SYSTEM "library.dtd">
+<library>
+  <book lang="it" isbn="123">
+    <title>Il nome della rosa</title>
+    <author>Umberto Eco</author>
+  </book>
+</library>

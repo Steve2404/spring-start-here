@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE catalog SYSTEM "catalog.dtd">
+<catalog>
+  <section>
+    <heading>Lot</heading>
+    <bundle>
+      <item><name>Seul</name><price>1</price></item>
+    </bundle>
+  </section>
+</catalog>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:lib:catalog">
+  <book isbn="9782070368228">
+    <title>L'Etranger</title>
+    <author>Albert Camus</author>
+    <price>8.50</price>
+    <meta><publisher>A</publisher><year>deux mille</year></meta>
+    <shelf>C12</shelf>
+  </book>
+</catalog>

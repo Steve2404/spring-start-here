@@ -1,0 +1,6 @@
+# Les fichiers de test XML contiennent volontairement des tabulations et des
+# CRLF (exercice sur la normalisation des fins de ligne) : Git ne doit JAMAIS
+# les convertir, sinon les resultats attendus changent d'une machine a l'autre.
+*.xml -text
+*.xsd -text
+*.dtd -text

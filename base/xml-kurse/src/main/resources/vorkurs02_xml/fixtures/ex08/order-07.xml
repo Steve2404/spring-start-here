@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order id="E-005">
+  <customer>Lea</customer>
+  <line>
+    <sku>X1</sku>
+    <quantity>2</quantity>
+    <price currency="EUR">12.50</price>
+  </line>
+  <delivery>12 rue des Lilas, Lyon</delivery>
+</order>

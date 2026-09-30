@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Export CRM v1 : a migrer vers le format v2 -->
+<customers>
+  <customer id="c3" vip="yes">
+    <name>Zoe Martin</name>
+    <email> ZOE@Mail.FR </email>
+    <phone>0601020304</phone>
+    <!-- numero a verifier -->
+  </customer>
+  <customer id="c1">
+    <name>Adam Smith</name>
+    <email>adam@x.org</email>
+  </customer>
+  <customer id="c2" vip="no">
+    <name>  Lea
+        Dubois </name>
+    <email></email>
+    <phone/>
+  </customer>
+</customers>

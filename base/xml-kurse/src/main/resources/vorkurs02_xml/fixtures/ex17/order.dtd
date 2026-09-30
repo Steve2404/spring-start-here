@@ -1,0 +1,4 @@
+<!ELEMENT order (note, item+)>
+<!ELEMENT note (#PCDATA)>
+<!ELEMENT item EMPTY>
+<!ATTLIST item sku CDATA #REQUIRED>

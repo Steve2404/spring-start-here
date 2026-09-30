@@ -1,0 +1,6 @@
+<?xml-stylesheet type="text/xsl" href="order.xsl"?>
+<café·menu note='a > b ]]> c' q="il dit 'oui'">
+  <_plat.du-jour>Soupe</_plat.du-jour>
+  <!---->
+</café·menu>
+<!-- fin -->

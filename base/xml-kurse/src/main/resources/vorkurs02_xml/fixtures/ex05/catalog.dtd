@@ -1,0 +1,13 @@
+<!ELEMENT catalog (section+)>
+<!ELEMENT section (heading, (item | bundle)*, note?)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT item    (name, price, (tag, tag?)?)>
+<!ELEMENT bundle  (item, item+)>
+<!ELEMENT name    (#PCDATA)>
+<!ELEMENT price   (#PCDATA)>
+<!ELEMENT tag     (#PCDATA)>
+<!ELEMENT note    (#PCDATA | b | i)*>
+<!ELEMENT b       (#PCDATA)>
+<!ELEMENT i       (#PCDATA)>
+<!ELEMENT br      EMPTY>
+<!ELEMENT extra   ANY>

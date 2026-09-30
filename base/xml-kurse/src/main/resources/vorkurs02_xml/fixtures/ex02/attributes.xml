@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Fichier volontairement "sale" : tabulations, CRLF, retours a la ligne dans les valeurs -->
+<config>
+  <entry key="motd" value="Bienvenue	chez nous
+        sur deux lignes"/>
+  <entry key="csv" value="a;b&#9;c&#10;d"/>
+  <entry key="crlf" value="x
+y"/>
+  <entry key="spaces" value="  deux  espaces  "/>
+  <entry key="quotes" value='il dit "oui" &amp; l&apos;autre'/>
+  <entry key="cr" value="avant&#13;apres"/>
+  <entry key="mix" value="	&#9;
+&#10;"/>
+</config>

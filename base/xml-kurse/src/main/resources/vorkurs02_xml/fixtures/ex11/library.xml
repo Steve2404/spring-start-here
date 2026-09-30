@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+  <shelf id="A">
+    <book lang="fr" year="1942"><title>L'Etranger</title><author>Camus</author></book>
+    <book lang="de" year="1925"><title>Der Prozess</title><author>Kafka</author><author>Brod</author></book>
+    <box>
+      <book lang="fr" year="1947"><title>La Peste</title><author>Camus</author></book>
+    </box>
+  </shelf>
+  <shelf id="B">
+    <book lang="en" year="1949"><title>1984</title><author>Orwell</author></book>
+    <magazine><title>Science</title></magazine>
+  </shelf>
+</library>

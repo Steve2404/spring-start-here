@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE library SYSTEM "library.dtd">
+<library>
+  <book id="b1" status="archived">
+    <title>A</title>
+    <author>X</author>
+    <year>2001</year>
+    <year>2002</year>
+  </book>
+</library>

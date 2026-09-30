@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<!DOCTYPE m:readings [<!ENTITY x "y">]>
+<m:readings xmlns:m="urn:sensors"/>
