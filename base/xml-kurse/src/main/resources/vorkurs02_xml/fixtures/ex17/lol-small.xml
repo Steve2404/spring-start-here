@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<!DOCTYPE order [
-  <!ENTITY lol0 "lol">
-  <!ENTITY lol1 "&lol0;&lol0;&lol0;&lol0;&lol0;&lol0;&lol0;&lol0;&lol0;&lol0;">
-  <!ENTITY lol2 "&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;">
-  <!ENTITY lol3 "&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;">
-]>
-<order><note>&lol3;</note><item sku="A1"/></order>

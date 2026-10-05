@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<o:orders xmlns:o="urn:shop:orders" xmlns="urn:shop:common">
+  <o:item sku="A"><name>Stylo</name></o:item>
+  <item sku="B"><name>Gomme</name></item>
+  <o:item sku="C" xmlns:o="urn:other"><name>Regle</name></o:item>
+</o:orders>

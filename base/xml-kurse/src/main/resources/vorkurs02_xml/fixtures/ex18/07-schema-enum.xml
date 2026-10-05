@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<order xmlns="urn:campus:lab" id="L-01" date="2026-09-01">
-  <device serial="SN-100"><type>laser</type><quantity>1</quantity></device>
-  <delivery>2026-09-10</delivery>
-</order>

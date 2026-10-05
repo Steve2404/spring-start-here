@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<!DOCTYPE order [
-  <!ENTITY % remote SYSTEM "order.dtd">
-  %remote;
-]>
-<order><note>x</note><item sku="A1"/></order>

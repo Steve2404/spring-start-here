@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<!DOCTYPE library SYSTEM "library.dtd">
-<library>
-  <book id="b1">
-    <title>A</title>
-    <author>X</Author>
-  </book>
-</library>

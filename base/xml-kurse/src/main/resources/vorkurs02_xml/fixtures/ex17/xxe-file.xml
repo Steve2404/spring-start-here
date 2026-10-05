@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<!DOCTYPE order [
-  <!ENTITY secret SYSTEM "secret.txt">
-]>
-<order><note>&secret;</note><item sku="A1"/></order>

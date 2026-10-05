@@ -2,82 +2,37 @@
 
 Exercices de code (pas de quiz) pour le cours Notion
 **Start Here → Kurse → Kapitel 0 → 0.2 XML allgemein (0.2.1 à 0.2.22)**.
-Même méthode que le dépôt `Kurse` (OCP) : chaque exercice est une classe avec des
-`TODO` à remplir, un `main()` qui vérifie tout avec `ExerciseChecker`, et un corrigé
-commenté séparé. Niveau visé : **challenge / entretien technique**.
 
-Tout vient du module `java.xml` du JDK : aucune dépendance externe.
+Format **projet**, le même que `base/annotation-kurse` et les chapitres refaits du dépôt `Kurse` :
+- tu reçois seulement un énoncé (`TODO.md`), des données (`Data.java`, parfois des fichiers dans `files/`) et un correcteur (`Check.java`) ;
+- **tu crées toi-même** tous les fichiers ;
+- `Check` lance ton `main`, compare la sortie ligne par ligne, puis lit tes sources (API exigée, notions des sections suivantes refusées) ;
+- un corrigé commenté est rangé dans `solution/`.
 
-## Structure
+> **En cours de construction.** Les projets p01 à p08 sont prêts. p09 à p13, les drills et le mode d'emploi `PARCOURS.md` arrivent. L'ancien format (exercices « remplir le corps ») a été retiré ; il reste consultable dans l'historique git (commit `194194b`).
 
-```
-base/xml-kurse/
-├── pom.xml                                   (Java 17, pas de dépendance)
-└── src/main/
-    ├── java/vorkurs02_xml/
-    │   ├── ExerciseChecker.java              check(...) / summary()
-    │   ├── Fixtures.java                     accès aux fichiers de test via le classpath
-    │   ├── exercises/Exercise01..18_*.java   les TODO
-    │   ├── solutions/Solution01..18_*.java   les corrigés commentés
-    │   └── drills/
-    │       ├── Campus.java                   données partagées par les drills
-    │       ├── REVISION.md                   parcours + répétition espacée + suivi
-    │       ├── exercises/Drill01..07_*.java
-    │       └── solutions/SolutionDrill01..07_*.java
-    └── resources/vorkurs02_xml/fixtures/     les vrais fichiers .xml / .xsd / .dtd (ex01 … ex18, drills)
-```
+## La règle du crescendo
 
-## Les 18 exercices (rangés par thème du cours)
+Jusqu'à la section 0.2.16, le cours ne montre **aucune** API Java pour XML : tu écris tes propres outils. L'outil fourni `xmlkit.XmlKit` sert d'arbitre (un vrai parseur, utilisé comme boîte noire). À partir de 0.2.17, tu utilises les vraies API (DOM, SAX, StAX…) et `XmlKit` est interdit.
 
-| # | Exercice | Cours | Ce que tu construis |
+| Projet | Cours | Classe `main` | Ce que tu construis |
 |---|---|---|---|
-| 01 | `WellFormednessDiagnoser` | 0.2.2 – 0.2.9 | ton propre vérificateur de bonne formation (pile LIFO, noms, attributs, références), arbitré par le parseur du JDK sur 21 fichiers |
-| 02 | `EscapingAndNormalization` | 0.2.6 | échapper / décoder / normaliser exactement comme le parseur (fins de ligne, attributs, références) |
-| 03 | `EntitiesCdataAndMarkup` | 0.2.7 – 0.2.8 | lookahead après `<`, CDATA, entités récursives avec détection de cycle et limite anti « billion laughs » |
-| 04 | `DtdValidationReport` | 0.2.9, 0.2.11 | rapport VALID / INVALID / NOT_WELL_FORMED, attributs ajoutés par la DTD, `getElementById` |
-| 05 | `ContentModelCompiler` | 0.2.11 | compilateur « modèle de contenu DTD → regex » + mini-validateur |
-| 06 | `NamespaceResolver` | 0.2.12 – 0.2.13 | résolution des QName à la main (pile de portées, `xmlns=""`, `xsi:type`) |
-| 07 | `NamespaceAwareDom` | 0.2.12 – 0.2.13, 0.2.17 | comparer deux documents qui n'utilisent pas les mêmes préfixes |
-| 08 | `XsdBatchValidation` | 0.2.15, 0.2.22 | valider un lot contre un XSD, causes racines, rapport par code `cvc-*` |
-| 09 | `XsdAuthoring` | 0.2.14 – 0.2.15 | **écrire le XSD** : 7 morceaux, jugés par 18 documents |
-| 10 | `XPathQueries` | 0.2.16 | requêtes XPath 1.0 : positions, axes inverses, namespaces |
-| 11 | `MiniXPathEngine` | 0.2.16 | ton propre moteur XPath, comparé nœud pour nœud à celui du JDK |
-| 12 | `DomNavigation` | 0.2.10, 0.2.17 | boîte à outils DOM : nœuds blancs, `ownText`, chemin XPath d'un nœud, `NodeList` vivante |
-| 13 | `DomMigration` | 0.2.17 | migration v1 → v2 en modifiant le DOM, puis sérialisation |
-| 14 | `SaxStreaming` | 0.2.18 | agrégation en flux, `characters()` en morceaux, arrêt anticipé |
-| 15 | `StaxPullParsing` | 0.2.19 | curseur StAX : `nextTag`, `getElementText`, sauter un bloc, API événements |
-| 16 | `ThreeParsersOneTask` | 0.2.20 | la même tâche en DOM, SAX et StAX sur 30 000 produits, et la table de choix |
-| 17 | `XmlSecurity` | 0.2.21 | voir une XXE fonctionner (en local), puis sécuriser DOM / SAX / StAX / XSD |
-| 18 | `XmlLabPipeline` | 0.2.22 | **capstone** : pipeline d'import couche par couche (bonne formation → namespace → XSD → métier) |
+| `p01_gate` | 0.2.1 → 0.2.5 | `Gate` | un portier qui diagnostique la bonne forme caractère par caractère (noms, balises, attributs, pile LIFO, racine) |
+| `p02_textgate` | 0.2.6 → 0.2.8 | `TextGate` | écrire et relire du texte comme un parseur : échappement, normalisation, références, entités, CDATA, lookahead |
+| `p03_tree` | 0.2.9 → 0.2.10 | `Tree` | ton propre arbre de nœuds, confronté au parseur ; la chaîne bien formé → valide → métier |
+| `p04_dtd` | 0.2.11 | `DtdCheck` | ton validateur DTD : modèles de contenu en regex, ATTLIST, interne contre externe |
+| `p05_names` | 0.2.12 → 0.2.13 | `Names` | ton résolveur de namespaces : portées, défaut, `xsi:type`, équivalence de documents |
+| `p06_schema` | 0.2.14 → 0.2.15 | `SchemaCheck` | **tu écris le XSD** du catalogue, jugé par 18 documents |
+| `p07_xpath` | 0.2.16 | `Queries` | des requêtes XPath, puis ton propre mini moteur XPath |
+| `p08_dom` | 0.2.17 | `DomLab` | DOM : naviguer, NodeList vivante, namespaces, migration v1 → v2, `Transformer` |
 
-Les 7 drills et le plan de révision : voir `src/main/java/vorkurs02_xml/drills/REVISION.md`.
+## Lancer
 
-## Lancer un exercice
+**IntelliJ :** ajoute `base/xml-kurse/pom.xml` comme projet Maven, puis clic droit sur un `Check.java` → *Run*. Argument `solution` pour vérifier le corrigé.
 
-**IntelliJ** : ouvre `base/xml-kurse/pom.xml` comme projet Maven (ou ouvre le dépôt et
-ajoute ce `pom.xml` comme projet Maven). Clic droit sur un `ExerciseNN_*.java` → *Run*.
-Tant qu'un TODO n'est pas fait, le programme s'arrête sur
-`UnsupportedOperationException: TODO 1 : ...` : c'est normal, c'est ton point de départ.
+**Terminal (Git Bash), depuis `base/xml-kurse` :**
 
-**Ligne de commande** (depuis `base/xml-kurse`) :
-
+```bash
+javac --release 17 -encoding UTF-8 -proc:none -d target/classes $(find src/main/java -name '*.java')
+java -cp target/classes vorkurs02_xml.projects.p01_gate.Check solution
 ```
-mvn -q compile
-java -cp target/classes vorkurs02_xml.exercises.Exercise01_WellFormednessDiagnoser
-```
-
-Les fichiers de test sont lus **par le classpath** (`Fixtures.path("ex08/order.xsd")`) :
-ça marche quel que soit le dossier de lancement, à condition que `src/main/resources`
-soit copié dans `target/classes` (Maven et IntelliJ le font).
-
-## Règles de ce dépôt
-
-- Tout comportement cité dans un énoncé (message, ligne d'erreur, résultat) a été
-  **vérifié en exécutant le vrai JDK 17**, jamais écrit de mémoire.
-- Chaque corrigé passe 100 % des tests de son exercice ; chaque exercice non résolu
-  s'arrête sur son TODO 1.
-- Les messages du parseur sont **traduits** selon la langue de la machine (allemand
-  ici) : les tests ne comparent jamais un message, seulement des codes (`cvc-...`),
-  des lignes et des résultats.
-- `.gitattributes` empêche Git de convertir les fins de ligne des `.xml` / `.xsd` /
-  `.dtd` (l'exercice 02 contient volontairement un CRLF).

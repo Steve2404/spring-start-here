@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<!DOCTYPE order [
-  <!ENTITY company "Acme &amp; Fils">
-]>
-<order><note>Client : &company;</note><item sku="A1"/><item sku="B2"/><item sku="C3"/></order>

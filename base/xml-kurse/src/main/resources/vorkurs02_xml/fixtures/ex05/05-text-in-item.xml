@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<!DOCTYPE catalog SYSTEM "catalog.dtd">
-<catalog>
-  <section>
-    <heading>Texte</heading>
-    <item>promo <name>A</name><price>1</price></item>
-  </section>
-</catalog>

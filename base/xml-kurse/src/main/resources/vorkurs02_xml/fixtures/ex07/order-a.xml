@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<inv:order xmlns:inv="urn:shop:invoice" xmlns:c="urn:shop:customer"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xmlns:m="urn:shop:money" inv:id="A-1">
-  <c:customer c:vip="true">Lea</c:customer>
-  <inv:line sku="X1"><inv:amount xsi:type="m:Euro">12.50</inv:amount></inv:line>
-  <inv:line sku="X2"><inv:amount xsi:type="m:Euro">7.25</inv:amount></inv:line>
-</inv:order>
