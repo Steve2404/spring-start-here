@@ -1,0 +1,16 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.springstarthere</groupId>
+  <artifactId>annotation-kurse</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>Vorkurs 0.4 - Annotations et Reflection (projets et drills)</name>
+
+  <properties>
+    <!-- Le JDK installe est un 17. Annotations, reflection, javax.tools
+         (compilateur), javax.annotation.processing : tout vient du JDK,
+         aucune dependance externe. -->
+    <maven.compiler.release>17</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+</project>
