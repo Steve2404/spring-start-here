@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="urn:logistics" date="2026-09-29">
+  <!-- lot du matin -->
+  <shipment id="S1" destination="Lyon">
+    <item sku="A1"><qty>2</qty><weight unit="kg">1.5</weight></item>
+    <item sku="B7"><qty>1</qty><weight unit="g">250</weight></item>
+  </shipment>
+  <audit>
+    <entry>controle <b>ok</b></entry>
+    <entry>scan</entry>
+  </audit>
+  <shipment id="S2" destination="Paris">
+    <item sku="C3">
+      <qty>10</qty>
+      <!-- poids unitaire -->
+      <weight unit="kg">0.8</weight>
+    </item>
+  </shipment>
+  <shipment id="S3" destination="Nice"/>
+</manifest>

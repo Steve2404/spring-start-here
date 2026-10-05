@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order id="L-06" date="2026-09-01">
+  <device serial="SN-100"><type>microscope</type><quantity>2</quantity></device>
+  <device serial="SN-101"><type>pipette</type><quantity>20</quantity></device>
+  <delivery>2026-09-10</delivery>
+</order>

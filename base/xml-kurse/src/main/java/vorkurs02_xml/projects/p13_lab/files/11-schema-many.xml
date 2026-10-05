@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order xmlns="urn:campus:lab" id="X1" date="2026-09-01">
+  <device serial="SN-1"><type>pipette</type><quantity>0</quantity></device>
+  <delivery>demain</delivery>
+</order>

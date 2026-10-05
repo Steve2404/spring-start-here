@@ -285,9 +285,44 @@ public final class ProjectChecker {
     // Les commentaires ne comptent pas : un appel ecrit seulement dans un // TODO n'est pas une utilisation.
     private static String readWithoutComments(Path file) {
         try {
-            return Files.readString(file).replaceAll("(?s)/\\*.*?\\*/", "").replaceAll("//[^\n]*", "");
+            return stripJavaComments(Files.readString(file));
         } catch (IOException e) {
             throw new IllegalStateException(e);
         }
+    }
+
+    /**
+     * Retire les commentaires Java en respectant les chaines : "string(/*)" ou "http://..." dans
+     * une chaine ne sont PAS des commentaires (une regex naive les prendrait pour tels).
+     */
+    private static String stripJavaComments(String s) {
+        StringBuilder out = new StringBuilder(s.length());
+        int i = 0;
+        while (i < s.length()) {
+            if (s.startsWith("\"\"\"", i)) {
+                int end = s.indexOf("\"\"\"", i + 3);
+                end = end < 0 ? s.length() : end + 3;
+                out.append(s, i, end);
+                i = end;
+            } else if (s.charAt(i) == '"' || s.charAt(i) == '\'') {
+                char q = s.charAt(i);
+                int j = i + 1;
+                while (j < s.length() && s.charAt(j) != q && s.charAt(j) != '\n') {
+                    j += s.charAt(j) == '\\' ? 2 : 1;
+                }
+                j = Math.min(j + 1, s.length());
+                out.append(s, i, j);
+                i = j;
+            } else if (s.startsWith("//", i)) {
+                int end = s.indexOf('\n', i);
+                i = end < 0 ? s.length() : end;
+            } else if (s.startsWith("/*", i)) {
+                int end = s.indexOf("*/", i + 2);
+                i = end < 0 ? s.length() : end + 2;
+            } else {
+                out.append(s.charAt(i++));
+            }
+        }
+        return out.toString();
     }
 }

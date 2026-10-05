@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<m:readings xmlns:m="urn:sensors">
+  <m:reading sensor="s1"><m:temp unit="C">20</m:temp></m:reading>
+  <m:reading sensor="s2"><m:temp unit="C">21</m:temp>
+</m:readings>

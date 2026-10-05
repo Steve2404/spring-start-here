@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:l="urn:campus:lab"
+           targetNamespace="urn:campus:lab"
+           elementFormDefault="qualified">
+  <xs:element name="order">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="device" type="l:DeviceType" maxOccurs="10"/>
+        <xs:element name="delivery" type="xs:date"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"><xs:pattern value="L-[0-9]{2}"/></xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="date" type="xs:date" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DeviceType">
+    <xs:sequence>
+      <xs:element name="type">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="microscope"/>
+            <xs:enumeration value="centrifuge"/>
+            <xs:enumeration value="pipette"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="quantity" type="xs:positiveInteger"/>
+    </xs:sequence>
+    <xs:attribute name="serial" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string"><xs:pattern value="SN-[0-9]{3}"/></xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+</xs:schema>

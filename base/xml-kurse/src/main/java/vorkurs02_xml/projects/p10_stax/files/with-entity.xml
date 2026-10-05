@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<!DOCTYPE note [<!ENTITY x "secret">]>
+<note>valeur &x;</note>

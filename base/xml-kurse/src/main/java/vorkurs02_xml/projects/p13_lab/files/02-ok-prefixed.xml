@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lab:order xmlns:lab="urn:campus:lab" id="L-02" date="2026-09-02">
+  <lab:device serial="SN-200"><lab:type>centrifuge</lab:type><lab:quantity>1</lab:quantity></lab:device>
+  <lab:delivery>2026-09-10</lab:delivery>
+</lab:order>

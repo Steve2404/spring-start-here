@@ -9,7 +9,9 @@ Format **projet**, le même que `base/annotation-kurse` et les chapitres refaits
 - `Check` lance ton `main`, compare la sortie ligne par ligne, puis lit tes sources (API exigée, notions des sections suivantes refusées) ;
 - un corrigé commenté est rangé dans `solution/`.
 
-> **En cours de construction.** Les projets p01 à p08 sont prêts. p09 à p13, les drills et le mode d'emploi `PARCOURS.md` arrivent. L'ancien format (exercices « remplir le corps ») a été retiré ; il reste consultable dans l'historique git (commit `194194b`).
+**Commence par [`src/main/java/vorkurs02_xml/PARCOURS.md`](src/main/java/vorkurs02_xml/PARCOURS.md)** : c'est le mode d'emploi complet. Il y a 13 projets et 10 drills (rappel chronométré + répétition espacée, voir `drills/README.md`).
+
+L'ancien format (exercices « remplir le corps ») a été retiré ; il reste consultable dans l'historique git (commit `194194b`).
 
 ## La règle du crescendo
 
@@ -25,6 +27,11 @@ Jusqu'à la section 0.2.16, le cours ne montre **aucune** API Java pour XML : tu
 | `p06_schema` | 0.2.14 → 0.2.15 | `SchemaCheck` | **tu écris le XSD** du catalogue, jugé par 18 documents |
 | `p07_xpath` | 0.2.16 | `Queries` | des requêtes XPath, puis ton propre mini moteur XPath |
 | `p08_dom` | 0.2.17 | `DomLab` | DOM : naviguer, NodeList vivante, namespaces, migration v1 → v2, `Transformer` |
+| `p09_sax` | 0.2.18 | `SaxLab` | SAX : événements, texte en morceaux, agrégation en flux, arrêt anticipé, erreurs |
+| `p10_stax` | 0.2.19 | `StaxLab` | StAX : curseur, `nextTag`/`getElementText`, sauter un bloc, API événements, DTD |
+| `p11_three` | 0.2.20 | `ThreeParsers` | la même tâche en DOM, SAX et StAX sur 30 000 produits, et la table de choix |
+| `p12_security` | 0.2.21 | `SafeImport` | une politique d'import sûre : parseurs configurés, chemin « ancien format » borné, schémas |
+| `p13_lab` | 0.2.22 | `LabPipeline` | **capstone** : la chaîne d'import couche par couche, validation et XPath par l'API |
 
 ## Lancer
 
